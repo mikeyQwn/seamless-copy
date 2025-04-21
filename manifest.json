@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2,
+    "name": "Seamless Copy",
+    "version": "0.0.1",
+
+    "description": "Copy element's content",
+
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["index.js"]
+        }
+    ],
+
+    "commands": {
+        "copy-text": {
+            "suggested_key": {
+                "default": "Ctrl+Alt+C"
+            },
+            "description": "Copy hovered-on element's text to terminal"
+        }
+    },
+
+    "background": {
+        "scripts": ["background.js"]
+    }
+}
